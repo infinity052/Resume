@@ -13,27 +13,22 @@ html{
     
     
 }
-
-.education-background{
-    background-attachment: fixed;
-    background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.8)), url('../Images/education-background.jpg');
-   
-    text-align: center;
-    
+body{
+    margin: 0px 0px 0px 0px;
 }
 .about-background{
     background: #E8E7E7;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 7rem;
 }
 p{ 
     font-family: Calibri,'Gill Sans', 'Gill Sans MT';
     color: #1E1511;
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1.8em;
     margin-left: 4%;
-    margin-top: 5%;
     margin-right: 3.5%;
     line-height: 1.5;
    
@@ -41,8 +36,8 @@ p{
 .profile-pic{
     display: block;
     margin-left: 5rem;
-    width: 300px;
-    height: 310px;
+    width: 320px;
+    height: 400px;
     float: left;
     border: 0.1rem solid;
     border-radius: 2%;
@@ -64,7 +59,7 @@ p{
 .header-background button:hover{
     background-color: #00FF1D;
 }
-.header-background, .education-background{
+.header-background{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,12 +68,14 @@ p{
 
 .header-inner{
 width: 100%;
-height: 100%;
-overflow: hidden;
-display: block;
+height: fit-content;
 /* margin: 40vh auto; */
 line-height: 2rem;
-
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-sizing: border-box;
 }
 h1{
     text-align: center;
@@ -88,16 +85,17 @@ h1{
     cursor: default;
 }
 .about-heading{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
     color: black;
-    font-size: 5em;
+    font-size: 6.5rem;
     font-family: Calibri;
     font-weight: 100;
     text-shadow: 0px 1px 2px grey;
 }
 .education-heading{
     
-    color: #E8E7E7;
-    font-size: 5em;
+    color: #ffffff !important;
     font-family: Calibri;
     font-weight: 100;
     text-shadow: 0px 1px 2px grey;
@@ -106,16 +104,19 @@ h1{
 .header-upper-h1{
     color: white;
     opacity: 0.18;
-
+    height: fit-content;
+    padding: 20px;
 }
 .header-lower-h1{
     color: white;
+    height: fit-content;
+    padding: 30px;
     opacity: 0.9;
 }
 
 .skills-background{
     background: linear-gradient(to left,rgb(0, 0, 0),rgb(20, 20, 20),rgb(27, 27, 27), black);
-    
+    padding-bottom: 80px;
     border: 2.5px solid white;
     
 }
@@ -155,23 +156,23 @@ svg circle:nth-child(2){
     stroke: #00FF1D;
 }
 .skill-card:nth-child(4) svg circle:nth-child(2)
-{   stroke-dashoffset: calc(269 - (269*60)/100);
+{   stroke-dashoffset: calc(269 - (269*90)/100);
     stroke: #00FFE7;
 }
 .skill-card:nth-child(5) svg circle:nth-child(2)
-{   stroke-dashoffset: calc(269 - (269*80)/100);
+{   stroke-dashoffset: calc(269 - (269*90)/100);
     stroke: white;
 }
 .skill-card:nth-child(6) svg circle:nth-child(2)
-{   stroke-dashoffset: calc(269 - (269*90)/100);
+{   stroke-dashoffset: calc(269 - (269*85)/100);
     stroke: white;
 }
 .skill-card:nth-child(7) svg circle:nth-child(2)
-{   stroke-dashoffset: calc(269 - (269*90)/100);
+{   stroke-dashoffset: calc(269 - (269*80)/100);
     stroke: #ffb93f;
 }
 .skill-card:nth-child(8) svg circle:nth-child(2)
-{   stroke-dashoffset: calc(269 - (269*80)/100);
+{   stroke-dashoffset: calc(269 - (269*100)/100);
     stroke: #8ffd00;
 }
 
@@ -326,6 +327,14 @@ svg circle:nth-child(2){
     background-size: cover;
     
 }
+.soft-skills-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.685)), url(../Images/softskills.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 .front img{
   height: 100%;
   width: 100%; 
@@ -360,11 +369,6 @@ svg circle:nth-child(2){
     width: 100%;
     backface-visibility: hidden;
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     /* background: radial-gradient(#D8D8D8,#E7D879,#D79A01, #B87801, #A97400, #905400,#7B3F01); */
     background: url(../Images/Experiences/card-back.jpg);
     background-position: center;
@@ -375,7 +379,7 @@ svg circle:nth-child(2){
     transition: 0.7s;
     border: 1px solid white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.5);
-    cursor: default;
+    cursor: pointer;
     
 }
 .project-card:hover .front{
@@ -385,9 +389,18 @@ svg circle:nth-child(2){
     transform: rotateY(0deg);
 }
 .details{
+    height: 100%;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .details h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-basis: 20%;
     width: 100%;
     color: white;
@@ -397,7 +410,10 @@ svg circle:nth-child(2){
     
 }
 .details p{
-    flex-basis: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 80%;
     color: rgba(255, 255, 255, 0.726);
     font-size: 1.0em;
     line-height: 1.2em;
@@ -523,8 +539,8 @@ transform: translateY(-4px);
     font-family: Calibri;
     text-align: center;
     line-height: 1px;
-    width: 150px;
-    height: 30px;
+    width: 10rem;
+    height: 4rem;
     background-color: #57DBBE;
     color: #FCFAF9;
     padding: 15px;
@@ -534,7 +550,8 @@ transform: translateY(-4px);
     padding: 1.5%;
     margin: 15px;
     margin-left: 70px;
-    font-size: 18px;
+    font-size: 1.7rem;
+    text-align: center;
     border-radius: 2%;
     cursor: pointer;
     transition: 0.2s;
@@ -563,11 +580,7 @@ transform: translateY(-4px);
      width: 800px;
      
   }
-  
-.education-background{
-    box-sizing: border-box;
-    
-}
+
 }
 
 @media screen and (max-width: 1000px){
@@ -685,9 +698,6 @@ transform: translateY(-4px);
   .error ,.form-success{
       text-align: center;
       font-size: 18px;
-      position: relative;
-        right:11%;
-      bottom: 10px;
       color: red;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       /* text-shadow: 0px 0.3px 0.2px rgb(170, 21, 21); */
@@ -722,7 +732,7 @@ transform: translateY(-4px);
     justify-content: flex-start;
     color: white;
     font-family: calibri;
-    font-size: 100%;
+    font-size: 130%;
     font-weight: 400;
 }
 .footer-background i{
